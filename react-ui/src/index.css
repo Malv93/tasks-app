@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+:root {
+  /*Color palette*/
+  --primary-color: #f5ba13;
+  --secondary-color: #eee;
+  /* Message alert position*/
+  --main-padding-top: 20px;
+  --main-padding-lateral: 10px;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: var(--secondary-color);
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+}
+
+/* Header */
+.navbar {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.header-button {
+  margin-left: 10px;
+}
+
+/* Main Content */
+
+.main-content {
+  position: relative;
+  flex: 1;
+  padding: var(--main-padding-top) var(--main-padding-lateral) 20px;
+}
+
+/*Message alert*/
+.message-alert {
+  position: sticky;
+  top: 0;
+  left: 0;
+  /* Necessary for message alert position while scrolling*/
+  margin: calc(-1 * var(--main-padding-top))
+    calc(-1 * var(--main-padding-lateral)) 10px;
+}
+
+/* Pages content width */
+/* .page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+
+/* Forms*/
+.add-task-form,
+.signing-form {
+  position: relative;
+  max-width: 480px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px #898989;
+}
+
+.add-task-form input,
+.add-task-form textarea,
+.signing-form input,
+.signing-form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+.add-task-form button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.signing-form {
+  text-align: center;
+}
+.signing-form input,
+.signing-form button {
+  width: 80%;
+}
+.signing-form input {
+  text-align: center;
+  margin: 10px auto 0;
+  border: solid 1px #cacaca;
+  border-radius: 4px;
+}
+.signing-form input:focus {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #000;
+}
+
+.signing-form button {
+  margin: 20px 0;
+}
+
+/* Task */
+.task {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 100%;
+  max-width: 440px;
+  margin: 16px auto;
+}
+
+/* Task - Larger screens */
+@media (min-width: 720px) {
+  .task {
+    flex: 1 1 260px;
+    margin: 16px;
+  }
+}
+.task .task-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.task .task-description {
+  font-size: 1.1em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.task .task-date {
+  font-size: 1em;
+  color: #585858;
+}
+
+.task .task-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.task .delete-button {
+  margin-right: 10px;
+  color: var(--primary-color);
+  border: none;
+  background: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+}
+
+.tasks-list {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
+
+.error-message {
+  color: #c72929;
+}
+
+/* Header */
+header {
+  color: #fff;
+  font-size: 1.2em;
+  background-color: var(--primary-color);
+  padding: 8px 12px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+header span {
+  margin-right: 30px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding-top: 20px;
+}
